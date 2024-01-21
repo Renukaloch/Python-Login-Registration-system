@@ -9,7 +9,7 @@ matplotlib==3.4.3
 mysql-connector-python==8.0.20
 mysqlclient==2.1.0
 numpy==1.21.2
-Pillow==8.3.2
+Pillow==10.2.0
 protobuf==3.12.2
 pydot==1.4.1
 PyMySQL==1.0.2
