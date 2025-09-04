@@ -1,6 +1,6 @@
 asgiref==3.4.1
 cycler==0.10.0
-Django==3.2.9
+Django==4.2.24
 django-crispy-forms==1.13.0
 django-extensions==3.0.2
 graphviz==0.14
