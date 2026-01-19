@@ -4,8 +4,14 @@
 # regex = '''(?i)\b(password|access_token)\b\s*=\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~-]+)["']'''
 # secretGroup = 2
 
+# [[rules]]
+# id = "flexible-password-assignment"
+# description = "Detect hardcoded passwords (assignments and mappings)"
+# regex = '''(?i)(["']?\bpassword\b["']?)\s*[:=]\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~ -]+)["']'''
+# secretGroup = 2
+
 [[rules]]
-id = "flexible-password-assignment"
-description = "Detect hardcoded passwords (assignments and mappings)"
-regex = '''(?i)(["']?\bpassword\b["']?)\s*[:=]\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~ -]+)["']'''
-secretGroup = 2
+id = "generic-secret-assignment"
+description = "Detect hardcoded secrets (passwords, tokens, keys, etc.) in assignments and mappings"
+regex = '''(?i)^\s*(["']?\b(password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)\b["']?)\s*[:=]\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~ -]+)["']'''
+secretGroup = 3
