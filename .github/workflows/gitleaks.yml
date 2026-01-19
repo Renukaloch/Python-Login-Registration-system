@@ -11,25 +11,13 @@ on:
       - feature/test-secrets
 
 jobs:
-  scan:
-    name: gitleaks
+  gitleaks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: gitleaks/gitleaks-action@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
         with:
           args: detect --source . --config-path .gitleaks.toml --exit-code 1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  # gitleaks:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v4
-
-  #     - name: Run Gitleaks
-  #       uses: gitleaks/gitleaks-action@v2
-  #       with:
-  #         args: detect --source . --config-path .gitleaks.toml --exit-code 1
