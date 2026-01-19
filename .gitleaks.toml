@@ -23,29 +23,31 @@
 # regex = '''(?i)\b['"]?(password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)['"]?\b\s*[:=]\s*['"]([^'"]+)['"]'''
 # secretGroup = 2
 
-[[rules]]
-id = "flexible-secret-assignment"
-description = "Detect hardcoded secrets (dict mappings or assignments)"
-# Case-insensitive keywords, but case-sensitive values
-regex = '''\b(?i:password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)['"]?\s*[:=]\s*["']([^"']+)["']'''
-secretGroup = 1
 
-[[rules]]
-id = "flexible-secret-assignment"
-description = "Detect hardcoded secrets (dict mappings or assignments)"
-# Case-insensitive keywords, but case-sensitive values
-regex = '''\b(?i:password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)['"]?\s*[:=]\s*["']([^"']+)["']'''
-secretGroup = 1
 
-  [[rules.allowlists]]
-  description = "Ignore UI Labels and function arguments"
-  regexTarget = "line"
-  regexes = [
-      '''(?i)Label\s*\(''',  # Excludes Label(text='password')
-      '''(?i)entry\s*\(''',  # Excludes entry(label='password')
-      '''(?i)text\s*[:=]''', # Excludes 'text' parameters in UI code
-      '''(?i)label\s*[:=]''' # Excludes 'label' parameters in UI code
-  ]
+# [[rules]]
+# id = "flexible-secret-assignment"
+# description = "Detect hardcoded secrets (dict mappings or assignments)"
+# # Case-insensitive keywords, but case-sensitive values
+# regex = '''\b(?i:password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)['"]?\s*[:=]\s*["']([^"']+)["']'''
+# secretGroup = 1
+
+# [[rules]]
+# id = "flexible-secret-assignment"
+# description = "Detect hardcoded secrets (dict mappings or assignments)"
+# # Case-insensitive keywords, but case-sensitive values
+# regex = '''\b(?i:password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)['"]?\s*[:=]\s*["']([^"']+)["']'''
+# secretGroup = 1
+
+#   [[rules.allowlists]]
+#   description = "Ignore UI Labels and function arguments"
+#   regexTarget = "line"
+#   regexes = [
+#       '''(?i)Label\s*\(''',  # Excludes Label(text='password')
+#       '''(?i)entry\s*\(''',  # Excludes entry(label='password')
+#       '''(?i)text\s*[:=]''', # Excludes 'text' parameters in UI code
+#       '''(?i)label\s*[:=]''' # Excludes 'label' parameters in UI code
+#   ]
 
 
   
