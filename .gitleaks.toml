@@ -25,8 +25,7 @@
 
 [[rules]]
 id = "flexible-secret-assignment"
-description = "Detect hardcoded secrets (assignment or mapping, flexible)"
-regex = '''(?i)^[\t ]*['"]?(password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)['"]?[\t ]*[:=][\t ]*['"]([^'"]+)['"]'''
+description = "Detect hardcoded secrets (dict mappings or assignments)"
+regex = '''(?i)['"]?(password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)['"]?\s*[:=]\s*["']([^"']+)["']'''
 secretGroup = 2
-
 
