@@ -1,5 +1,11 @@
+# [[rules]]
+# id = "generic-password-assignment"
+# description = "Detect hardcoded passwords or access tokens"
+# regex = '''(?i)\b(password|access_token)\b\s*=\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~-]+)["']'''
+# secretGroup = 2
+
 [[rules]]
-id = "generic-password-assignment"
-description = "Detect hardcoded passwords or access tokens"
-regex = '''(?i)\b(password|access_token)\b\s*=\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~-]+)["']'''
+id = "flexible-password-assignment"
+description = "Detect hardcoded passwords (assignments and mappings)"
+regex = '''(?i)(["']?\bpassword\b["']?)\s*[:=]\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~ -]+)["']'''
 secretGroup = 2
