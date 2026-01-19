@@ -1,4 +1,5 @@
 [[rules]]
+id = "generic-password"
 description = "Generic password assignment"
 regex = '''(?i)password\s*[:=]\s*["']?[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+["']?'''
 secretGroup = 0
