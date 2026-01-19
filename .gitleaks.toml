@@ -1,5 +1,5 @@
 [[rules]]
-id = "generic-password"
-description = "Generic password assignment"
-regex = '''(?i)password\s*[:=]\s*["']?[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+["']?'''
+id = "generic-password-assignment"
+description = "Detect password assignments"
+regex = '''(?i)(password|access_token)\s*[:=]\s*["'][^"']+["']'''
 secretGroup = 0
