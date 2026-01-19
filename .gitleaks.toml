@@ -10,11 +10,18 @@
 # regex = '''(?i)(["']?\bpassword\b["']?)\s*[:=]\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~ -]+)["']'''
 # secretGroup = 2
 
+# [[rules]]
+# id = "flexible-secret-assignment"
+# description = "Detect hardcoded secrets (assignments and mappings)"
+# regex = '''(?i)(["']?\b(password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)\b["']?)\s*[:=]\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~ -]+)["']'''
+# secretGroup = 3
+
 [[rules]]
-id = "flexible-secret-assignment"
-description = "Detect hardcoded secrets (assignments and mappings)"
-regex = '''(?i)(["']?\b(password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)\b["']?)\s*[:=]\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~ -]+)["']'''
-secretGroup = 3
+id = "flexible-secret-assignment-strict"
+description = "Detect hardcoded secrets as variable assignments, ignore labels"
+regex = '''(?i)^\s*["']?(password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)["']?\s*[:=]\s*["']([A-Za-z0-9!@#$%^&*()_+=\[\]{};':",./<>?|`~ -]+)["']'''
+secretGroup = 2
+
 
 # [[rules]]
 # id = "flexible-secret-assignment"
