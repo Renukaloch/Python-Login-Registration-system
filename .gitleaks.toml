@@ -13,5 +13,5 @@
 [[rules]]
 id = "generic-secret-assignment"
 description = "Detect hardcoded secrets (passwords, tokens, keys, etc.) in assignments and mappings"
-regex = '''(?i)^\s*['"]?\b(password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)\b['"]?\s*[:=]\s*['"]([^'"]+)['"]'''
+regex = '''(?i)^\s*['"]?(password|access_token|token|accesskey|access_key|apikey|api_key|secret|db_password|db_user)['"]?\s*[:=]\s*['"]([^'"]+)['"]'''
 secretGroup = 2
