@@ -3,11 +3,11 @@ name: Gitleaks Secret Scan
 on:
   push:
     branches: 
-      - main
+      - master
       - feature/test-secrets
   pull_request:
     branches: 
-      - main
+      - master
       - feature/test-secrets
 
 jobs:
