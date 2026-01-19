@@ -6,6 +6,7 @@ on:
       - main
       - 'release/**'
       - test-gitleaks
+      - feature/test-secrets
 
 jobs:
   gitleaks:
