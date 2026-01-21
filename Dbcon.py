@@ -2,7 +2,7 @@ import pymysql
 
 dbConfig = {
      'user': 'root',  # use your admin name
-     'password': "renuka",  # use your admin password
+     'password': "renukasss",  # use your admin password
      'host': '127.0.0.1',  # IP address of localhost
      'database': 'adlogin', # your databse
 }
