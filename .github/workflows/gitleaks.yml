@@ -3,7 +3,7 @@ name: Gitleaks Secrets Scan
 on:
   pull_request:
     branches:
-      - main
+      - master
       - 'release/**'
       - test-gitleaks
 
