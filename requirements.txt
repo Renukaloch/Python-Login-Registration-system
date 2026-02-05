@@ -1,6 +1,6 @@
 asgiref==3.4.1
 cycler==0.10.0
-Django==3.2.9
+Django==4.2.28
 django-crispy-forms==1.13.0
 django-extensions==3.0.2
 graphviz==0.14
@@ -10,7 +10,7 @@ mysql-connector-python==8.0.20
 mysqlclient==2.1.0
 numpy==1.21.2
 Pillow==8.3.2
-protobuf==3.12.2
+protobuf==6.33.5
 pydot==1.4.1
 PyMySQL==1.0.2
 pyparsing==2.4.7
